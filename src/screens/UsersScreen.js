@@ -4,35 +4,29 @@ import { Text, StyleSheet, View, FlatList, Image } from 'react-native'
 const list = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba1',
-    name: 'Amy',
+    rang: 'CEO',
     avatar_url: 'https://i.pravatar.cc/150?img=1',
     title: 'Vice President'
   },
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba2',
-    name: 'Chris',
+    rang: 'Manager',
     avatar_url: 'https://i.pravatar.cc/150?img=2',
     title: 'Vice Chairman'
   },
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba3',
-    name: 'Ray',
+    rang: 'IT Support',
     avatar_url: 'https://i.pravatar.cc/150?img=3',
     title: 'Vice President'
   },
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba4',
-    name: 'John',
+    rang: 'Softwer Engeneer',
     avatar_url: 'https://i.pravatar.cc/150?img=4',
     title: 'Vice President'
   },
 ]
-
-const Item = ({ title }) => (
-  <View style={styles.listItem}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
 
 const UsersScreen = () => {
 
@@ -42,7 +36,9 @@ const UsersScreen = () => {
         style={styles.tinyLogo}
         source={{ uri: item.avatar_url }}
       />
-      <Item title={item.title} />
+      <Text style={styles.title}>{item.title}</Text>
+      <Text> / </Text>
+      <Text>{item.rang}</Text>
     </View>
   );
 
@@ -73,7 +69,7 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   listItem: {
-    marginBottom: 10,
+    marginBottom: 15,
     flexDirection: 'row',
     alignItems: 'center'
   },
