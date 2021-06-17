@@ -6,7 +6,10 @@ import { Ionicons } from '@expo/vector-icons';
 // Screens:
 import HomeScreen from './src/screens/HomeScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
-import UsersScreen from './src/screens/UsersScreen';
+import MyNetworkScreen from './src/screens/MyNetworkScreen';
+import PostScreen from './src/screens/PostScreen';
+import NotificationsScreen from './src/screens/NotificationsScreen';
+import JobsScreen from './src/screens/JobsScreen';
 
 // Icons:
 
@@ -22,11 +25,15 @@ export default function App() {
             let iconName;
 
             if (route.name === 'Home') {
-              iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
-            } else if (route.name === 'Users') {
-              iconName = focused ? 'ios-list' : 'ios-list';
-            } else if (route.name === 'Settings') {
-              iconName = focused ? 'ios-list' : 'ios-list';
+              iconName = focused ? 'home' : 'home';
+            } else if (route.name === 'My Network') {
+              iconName = focused ? 'ios-people' : 'ios-people';
+            } else if (route.name === 'Post') {
+              iconName = focused ? 'ios-add-outline' : 'ios-add-outline';
+            } else if (route.name === 'Notifications') {
+              iconName = focused ? 'notifications' : 'notifications';
+            } else if (route.name === 'Jobs') {
+              iconName = focused ? 'ios-briefcase' : 'ios-briefcase';
             }
 
             // You can return any component that you like here!
@@ -34,13 +41,15 @@ export default function App() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: 'green',
+          activeTintColor: 'black',
           inactiveTintColor: 'gray',
         }}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Users" component={UsersScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="My Network" component={MyNetworkScreen} />
+        <Tab.Screen name="Post" component={PostScreen} />
+        <Tab.Screen name="Notifications" component={NotificationsScreen} />
+        <Tab.Screen name="Jobs" component={JobsScreen} />
       </Tab.Navigator>
 
     </NavigationContainer>

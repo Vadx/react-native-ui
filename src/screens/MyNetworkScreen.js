@@ -28,7 +28,7 @@ const list = [
   },
 ]
 
-const UsersScreen = () => {
+const MyNetworkScreen = () => {
 
   const renderItem = ({ item }) => (
     <View style={styles.listItem}>
@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default UsersScreen
+export default MyNetworkScreen
