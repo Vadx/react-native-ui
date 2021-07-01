@@ -44,7 +44,7 @@ const MyNetworkScreen = () => {
 
   return (
     <View>
-      <Text style={styles.textStyle}>All Users</Text>
+      <Text style={styles.textStyle}>All Items</Text>
       <FlatList
         data={list}
         renderItem={renderItem}
